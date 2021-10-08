@@ -1,12 +1,12 @@
- _                 _    ____   _____ 
-| |               | |  / __ \ / ____|
-| |__   ___   ___ | |_| |  | | (___  
-| '_ \ / _ \ / _ \| __| |  | |\___ \ 
-| |_) | (_) | (_) | |_| |__| |____) |
-|_.__/ \___/ \___/ \__|\____/|_____/                                                                           
+
+
+
+
+TinyDOS
+
 
 bootOS operating system in 512 bytes (boot sector)
-by Oscar Toledo G. Jul/22/2019
+by Oscar Toledo G. and DiamondCoder1000 Jul/22/2019
 
 http://nanochess.org
 https://github.com/nanochess/bootOS
@@ -21,7 +21,7 @@ Use this command line:
   nasm -f bin os.asm -l os.lst -o os.img
 
         
-What is bootOS:
+What is TinyDOS:
 
   bootOS is a monolithic operating system that fits in
   one boot sector. It's able to load, execute, and save
@@ -62,7 +62,7 @@ What is bootOS:
 
 Filesystem organization:
 
-  bootOS uses tracks from 0 to 32, side 0, sector 1.
+  TinyDOS uses tracks from 0 to 32, side 0, sector 1.
 
   The directory is contained in track 0, side 0, sector 2.
 
@@ -81,7 +81,7 @@ Filesystem organization:
   The 32nd file is located at track 32, side 0, sector 1.
  
 
-Starting bootOS:
+Starting TinyDOS:
 
   Just make sure to write it at the boot sector of a
   floppy disk. It can work with any floppy disk size
@@ -108,14 +108,14 @@ Starting bootOS:
 
     qemu-system-x86_64 -fda os.img
 
-Running bootOS:
+Running TinyDOS:
 
   The first time you should enter the 'format' command,
   so it initializes the directory. It also copies itself
   again to the boot sector, this is useful to init new
   disks.
         
-bootOS commands:
+TinyDOS commands:
 
   ver           Shows the version (none at the moment)
   dir           Shows the directory's content.
@@ -146,7 +146,7 @@ For example: (Character + is Enter key)
   Hello, world
   $
         
-bootOS programs: (Oh yes! we have software support)
+TinyDOS programs: (Oh yes! we have software support)
         
   cubicDoom     https://github.com/nanochess/cubicDoom
   bricks        https://github.com/nanochess/bricks
@@ -191,7 +191,7 @@ Enjoy it!
 Special thanks to Jakub Kądziołka (NieDzejkob) for finding
 some bugs and suggesting enhancements.
 
-There's a bootOS fork by jakiki6 capable of running from
+There's a TinyOS fork by jakiki6 capable of running from
 an USB stick, and including many other changes.
 Download from: https://github.com/jakiki6/bootOS
 
